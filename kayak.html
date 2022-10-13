@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Kayaking</title>
+    <style>
+        body {
+            background: radial-gradient(circle at -1% 57.5%, rgba(19, 170, 82, .4) 0%, rgba(0, 102, 43, .6) 90%);
+            font-family: 'Open Sans', sans-serif;
+            display: block;
+            margin: 40px auto 20px;
+            text-align: center;
+        }
+        button {
+            font-size: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        button:hover {
+            background-color: rgb(0, 74, 47);
+            color: white;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+        p {
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        a {
+            font-weight: 600;
+            color: rgb(0, 74, 47);
+        }
+        footer {
+            font-size: 13px;
+        }
+        .container {
+            background-color: rgba(255,255,255,.7);
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 10px 20px 40px;
+            text-align: center;
+            width: 700px;
+        }
+        .intro-picture:hover {
+            filter: drop-shadow(5px 5px 10px rgb(52, 52, 52));
+            transform: scale(1.1);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            margin: 10px 0px;
+        }
+        .image-grid img:hover {
+            filter: drop-shadow(5px 5px 10px rgb(52, 52, 52));
+            transform: scale(2);
+        }
+        .more-info {
+            font-size: 18px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .more-info:hover {
+            background-color: rgb(0, 74, 47);
+            color: white;
+        }
+        .dark {
+            background: black;
+            color: white;
+        }
+        .dark .container {
+            background-color: rgba(255,255,255,.2);
+        }
+        .dark .theme {
+            background-color: rgba(255,255,255,.2);
+            color: white; 
+            border: 1px solid white;
+        }
+        .dark .theme:hover {
+            background-color: white;
+            color: black;
+        }
+        .dark a {
+            color: white; 
+        }
+        .dark .more-info {
+            color: white; 
+            border: 1px solid white;
+        }
+        .dark .more-info:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme">Change theme</button>
+    <div class="container">
+        <h1>Kayaking</h1>
+        <img class="intro-picture" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/151/original/IMG_4781.jpg?1665517588" alt=""/>
+        <div class="image-grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/149/original/20220915_105516.jpg?1665517573" alt=""/>
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/152/original/IMG_4745.jpg?1665517604" alt=""/>
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/199/original/20210514_153711.jpg?1665557788" alt=""/>
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/153/original/IMG_4768.jpg?1665517648" alt=""/>
+        </div>
+        <p>
+            Kayaking is the use of a kayak for moving over water. 
+            Kayaking is a type of paddling. 
+            It is distinguished from other types of paddling by the sitting position of the paddler and the number of blades on the paddle. 
+            A kayak is a low-to-the-water boat in which the paddler sits facing forward, legs in front, using a double-bladed paddle to move through the water. 
+            Kayaks have closed decks, allowing the paddler for more control. Sit-on-top and inflatable kayaks are growing in popularity for non-white water activities, like fishing. 
+            Kayaks can be built for a single paddler or as a tandem for two or three paddlers. 
+        </p>
+        <a class="more-info" href="https://en.wikipedia.org/wiki/Kayaking" target="_blank">Learn more about kayaking</a>
+    </div>
+    <footer>Coded by <a href="https://github.com/scassady8/ShannonCassady-Portfolio" target="_blank">Shannon Cassady</a> with HTML, CSS, and JavaScript</footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+
+        let themeButton = document.querySelector(".theme");
+        themeButton.addEventListener("click", changeTheme); 
+    </script>
+</body>
+</html>
